@@ -11,3 +11,5 @@ C. Back to part C.  I believe I misunderstood the instructions for part c.  I ad
    the instructions wanted the student to rename "Parts" and "Products" (the contents
    of the h2 tags on lines 23 and 55 of mainscreen.html)?  Just renamed those
    Rocket Parts, and Rockets respectively.
+
+E. Created 5 parts and 5 products in lines 43 through 89 of BootStrapData.java.

@@ -1,5 +1,6 @@
 package com.example.demo.bootstrap;
 
+import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
@@ -38,6 +39,55 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        if (productRepository.count() == 0)
+        {
+            Product mightyMouse = new Product("Mighty Mouse", 19.95, 13);
+            Product freshman = new Product("Freshman", 29.99, 15);
+            Product bigBoy = new Product("Big Boy", 45.99, 15);
+            Product thunderClap = new Product("Thunder Clap", 60.00, 10);
+            Product terminator1000 = new Product("Terminator 1000", 89.99, 7);
+
+            productRepository.save(mightyMouse);
+            productRepository.save(freshman);
+            productRepository.save(bigBoy);
+            productRepository.save(thunderClap);
+            productRepository.save(terminator1000);
+        }
+
+        if (partRepository.count() == 0)
+        {
+            InhousePart noseCone = new InhousePart();
+            noseCone.setName("nose cone");
+            noseCone.setPrice(10.99);
+            noseCone.setInv(20);
+
+            InhousePart parachute = new InhousePart();
+            parachute.setName("parachute");
+            parachute.setPrice(10.99);
+            parachute.setInv(30);
+
+            InhousePart fins = new InhousePart();
+            fins.setName("fins");
+            fins.setPrice(5.99);
+            fins.setInv(40);
+
+            InhousePart engine = new InhousePart();
+            engine.setName("engine");
+            engine.setPrice(15.99);
+            engine.setInv(60);
+
+            InhousePart body = new InhousePart();
+            body.setName("body");
+            body.setPrice(20.99);
+            body.setInv(30);
+
+            partRepository.save(noseCone);
+            partRepository.save(parachute);
+            partRepository.save(fins);
+            partRepository.save(engine);
+            partRepository.save(body);
+        }
 
        /*
         OutsourcedPart o= new OutsourcedPart();

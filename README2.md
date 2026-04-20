@@ -5,3 +5,9 @@ D. Added another controller named AboutPage (...demo\controllers\AboutPage.java)
      create the about page.  Added a link to about.html in mainscreen.html on line
      21.  In about.html, typed out the about message on lines 10 and 11
      , and created a link that directs users back to mainscreen.html on line 12.
+
+C. Back to part C.  I believe I misunderstood the instructions for part c.  I added
+   5 parts and products using the "add inhouse part" and "add product" buttons, but 
+   the instructions wanted the student to rename "Parts" and "Products" (the contents
+   of the h2 tags on lines 23 and 55 of mainscreen.html)?  Just renamed those
+   Rocket Parts, and Rockets respectively.

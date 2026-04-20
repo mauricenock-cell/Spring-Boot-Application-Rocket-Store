@@ -13,3 +13,9 @@ C. Back to part C.  I believe I misunderstood the instructions for part c.  I ad
    Rocket Parts, and Rockets respectively.
 
 E. Created 5 parts and 5 products in lines 43 through 89 of BootStrapData.java.
+
+F. Created success.html and failure.html pages and each have a link to mainscreen.  Added 
+    buy now link to line 87 of mainscreen.html.  Added logic to decrement 
+    the relevant item in inventory if it exists in inventory or if the item is out
+    of stock then send the user to the failure page.  This function was
+    put in AddProductcontroller.java on lines 183-198.

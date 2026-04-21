@@ -32,3 +32,9 @@ G. Added minInv and maxInv variable to lines 35-39 of Part.java and added corres
     the annotation @ValidInventory to line 23 of Part.java.  Added tags to lines, 32-37 and 33-38 of
     InhousePartForm.html and OursourcedPartForm.html respectively to output error message if the
     inventory of a certain part is out of range.
+
+H. Added an if statement to line 37 of EnufPartsValidator.java.  This statement
+    will return false if the addition of a threshold number of products will make the inventory
+    of any of the associated parts drop below the minimum inventory value.  Displaying an
+    error message if the inventory of any of the parts drop below a minimum or is greater than
+    a maximum was done in part G.

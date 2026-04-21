@@ -43,10 +43,15 @@ public class BootStrapData implements CommandLineRunner {
         if (productRepository.count() == 0)
         {
             Product mightyMouse = new Product("Mighty Mouse", 19.95, 13);
+            mightyMouse.setId(1);
             Product freshman = new Product("Freshman", 29.99, 15);
+            freshman.setId(2);
             Product bigBoy = new Product("Big Boy", 45.99, 15);
+            bigBoy.setId(3);
             Product thunderClap = new Product("Thunder Clap", 60.00, 10);
+            thunderClap.setId(4);
             Product terminator1000 = new Product("Terminator 1000", 89.99, 7);
+            terminator1000.setId(5);
 
             productRepository.save(mightyMouse);
             productRepository.save(freshman);

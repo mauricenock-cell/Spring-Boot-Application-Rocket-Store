@@ -133,4 +133,15 @@ public abstract class Part implements Serializable {
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
     }
+
+    public boolean isPositive(int num)
+    {
+        return num >= 0;
+    }
+
+    public boolean belowMAX_VALUE(int num)
+    {
+        return num <= Integer.MAX_VALUE;
+    }
+
 }

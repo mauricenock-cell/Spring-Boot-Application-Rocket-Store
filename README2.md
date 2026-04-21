@@ -38,3 +38,5 @@ H. Added an if statement to line 37 of EnufPartsValidator.java.  This statement
     of any of the associated parts drop below the minimum inventory value.  Displaying an
     error message if the inventory of any of the parts drop below a minimum or is greater than
     a maximum was done in part G.
+
+I. Added tests to lines 31-47 of PartTest.java to check if minInv and maxInv are positive.

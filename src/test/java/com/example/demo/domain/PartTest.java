@@ -27,6 +27,25 @@ class PartTest {
         partIn=new InhousePart();
         partOut=new OutsourcedPart();
     }
+
+    //Check if minInv is positive.
+    @Test
+    void isPosMinInv() {
+        partIn.setMinInv(-10);
+        assertEquals(false, partIn.isPositive(partIn.getMinInv()));
+        partOut.setMinInv(10);
+        assertEquals(true, partOut.isPositive(partOut.getMinInv()));
+    }
+
+    //Check if maxInv is positive
+    @Test
+    void isPosMaxInv() {
+        partIn.setMaxInv(-10);
+        assertEquals(false, partIn.isPositive(partIn.getMaxInv()));
+        partOut.setMaxInv(10);
+        assertEquals(true, partOut.isPositive(partOut.getMaxInv()));
+    }
+
     @Test
     void getId() {
         Long idValue=4L;

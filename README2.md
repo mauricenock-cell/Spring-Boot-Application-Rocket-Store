@@ -40,3 +40,5 @@ H. Added an if statement to line 37 of EnufPartsValidator.java.  This statement
     a maximum was done in part G.
 
 I. Added tests to lines 31-47 of PartTest.java to check if minInv and maxInv are positive.
+
+J. The deletePartsValidator had no usages so that file was deleted.

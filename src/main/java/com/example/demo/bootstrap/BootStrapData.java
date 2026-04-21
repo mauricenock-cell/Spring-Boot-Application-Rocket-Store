@@ -61,26 +61,36 @@ public class BootStrapData implements CommandLineRunner {
             noseCone.setName("nose cone");
             noseCone.setPrice(10.99);
             noseCone.setInv(20);
+            noseCone.setMinInv(1);
+            noseCone.setMaxInv(30);
 
             InhousePart parachute = new InhousePart();
             parachute.setName("parachute");
             parachute.setPrice(10.99);
             parachute.setInv(30);
+            parachute.setMinInv(1);
+            parachute.setMaxInv(40);
 
             InhousePart fins = new InhousePart();
             fins.setName("fins");
             fins.setPrice(5.99);
             fins.setInv(40);
+            fins.setMinInv(1);
+            fins.setMaxInv(50);
 
             InhousePart engine = new InhousePart();
             engine.setName("engine");
             engine.setPrice(15.99);
             engine.setInv(60);
+            engine.setMinInv(1);
+            engine.setMaxInv(70);
 
             InhousePart body = new InhousePart();
             body.setName("body");
             body.setPrice(20.99);
             body.setInv(30);
+            body.setMinInv(1);
+            body.setMaxInv(40);
 
             partRepository.save(noseCone);
             partRepository.save(parachute);

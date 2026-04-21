@@ -19,3 +19,16 @@ F. Created success.html and failure.html pages and each have a link to mainscree
     the relevant item in inventory if it exists in inventory or if the item is out
     of stock then send the user to the failure page.  This function was
     put in AddProductcontroller.java on lines 183-198.
+
+G. Added minInv and maxInv variable to lines 35-39 of Part.java and added corresponding
+   getter and setter methods to lines 102-114 of the same file.  Added fields Min Inventory,
+    and Max Inventory to home page by adding relevant tags to lines, 40-41, and 50-51
+    of mainscreen.html.  In BootStrapData.java made changes on lines 64-65, 71-72, 78-79,
+    85-86, 92-93, to set minInv, and maxInv for each part.  Added additional text fields
+    to inHouse and outSource part pages for min and max inventory by adding relevant tags to lines 24-28, and lines 25-29
+    of InhousePartForm.html and OutsorcedPartform.html respectively.  Created pages InventoryValidator.java
+    and ValidInventory.java to enforce that the inventory is between the min and max value
+    for a given part.  Connected ValidInventory validator to the Part class by adding
+    the annotation @ValidInventory to line 23 of Part.java.  Added tags to lines, 32-37 and 33-38 of
+    InhousePartForm.html and OursourcedPartForm.html respectively to output error message if the
+    inventory of a certain part is out of range.

@@ -35,10 +35,13 @@ G. Added minInv and maxInv variable to lines 35-39 of Part.java and added corres
 
 H. Added an if statement to line 37 of EnufPartsValidator.java.  This statement
     will return false if the addition of a threshold number of products will make the inventory
-    of any of the associated parts drop below the minimum inventory value.  Displaying an
-    error message if the inventory of any of the parts drop below a minimum or is greater than
+    of the associated parts drop below the minimum inventory value.  Displaying an
+    error message if the inventory of the parts drop below a minimum or is greater than
     a maximum was done in part G.
 
 I. Added tests to lines 31-47 of PartTest.java to check if minInv and maxInv are positive.
 
 J. The deletePartsValidator had no usages so that file was deleted.
+
+L. Assignment was kicked back.  The customizations to the html did not take effect because I modified 
+    the html files that were in the target folder instead of the html files that were in the src folder.

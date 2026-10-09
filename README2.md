@@ -1,3 +1,13 @@
+#Overview of Assignment/Project
+
+This assignment required the student to modify a prebuilt Spring Boot Application.
+The application is a store that sells model rockets and rocket parts.
+
+Below is almost an exact copy of the GitLab commit history (GitLab was the platform used at the time), and it explains each modification
+made to the Application.
+
+Commit history:
+
 C. In ...target/templates/mainscreen.html, changed the contents of title tag of line 14, and h1 tag of line 19 to
      "Moe's Model Rockets".  Also added 5 parts and products using the browser.   
 

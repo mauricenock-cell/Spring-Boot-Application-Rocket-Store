@@ -27,7 +27,7 @@ Windows 11
 8.  After the project loads, click the green triangular-shaped button.  This is located at the top of the window near the center. This will start the application.
 9.  To view the application, open a browser and type http://localhost:8080 in the address bar, then press Enter.  The application will run here.
 
-## Commit history:
+## Commit history (Modifications made):
 
 Below is a copy of the GitLab commit history (GitLab was the platform used at the time), and it explains each modification
 made to the Application.

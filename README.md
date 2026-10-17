@@ -82,14 +82,74 @@ L. Assignment was kicked back.  The customizations to the html did not take effe
 
 ## Deployment to AWS
 
+
+1.  Create a Docker image.  Go to a search engine and type google jib maven plugin.  Several sites will have the plugin; go to one and copy the plugin (copy the portion starting with the tag  <plugin> and ending with </plugin>).
+
+     ![]()
+
+2.  In IntelliJ, open the pom.xml file and, under <build> and <plugins>, paste the snippet.
+
+     ![]()
+
+This method avoids having to create a Dockerfile.
+
+3.	Create a .jar file by opening the Maven tools window and double-clicking clean, then 
+	double-clicking install.  This can also be done from the command line by typing
+            mvn clean install.  The .jar file will appear in the target folder.
+
+	![]()
+
+4.  Go to the Maven tools window, expand plugins and jib, then double-click 
+     jib:DockerBuild, or from the command line, type mvn compile jib:DockerBuild.
+     This will create a Docker image.  The image moes-model-rockets-v1 is
+     created.
+     
+     ![]()
+
+5.  Next, the image has to be pushed to DockerHub.  On the command line, type
+     docker tag image username/image.  In my case, it would be 
+     docker tag moes-model-rockets:v1 mnock1/moes-model-rockets:v1.  Then type
+     docker push username/image (docker push mnock1/moes-model-rockets:v1).
+
+    ![]()
+	
+7.  Go to AWS and log in/create a new account.  Create an EC2 instance
+     (straightforward process).  Here is mine:
+    
+     ![]()
+    
+8.  Start the instance and connect to it.  My instance uses the default Amazon Linux OS.
+
+     ![]()
+
+9.  Install Docker and start its daemon by typing sudo yum install docker, then sudo 
+     systemctl start docker.service.
+
+    ![]()
+
+10.  Pull the image from DockerHub by typing docker pull DockerHubUsername/image or
+     docker pull mnock1/moes-model-rockets:v1 in my case.
+
+    ![]()
+
+11.  To run the app, type sudo docker run -p 8080:8080 DockerHubUsername/image or
+             In my case, sudo docker run -p 8080:8080 mnock1/moes-model-rockets:v1.
+
+     ![]()
+	 
+	
+     	
+     	
+
+
 1. In IntelliJ, create a .jar file by opening the maven tools window.  Double-click clean, then double-click install.  This can also be done from the command line by typing
    mvn clean install.  The .jar file will appear in the target folder.
 
-   !()[]
+   
 
 2. Next, create a Docker image.  Go to a search engine and type google jib maven plugin.  Several sites will have the plugin so go to one and copy the plugin (copy the portion starting with the tag
    <plugin> and ending with </plugin>).
 
-   !()[]
+   ![]()
 
 4.

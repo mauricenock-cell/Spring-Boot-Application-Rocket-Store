@@ -79,3 +79,17 @@ J. The deletePartsValidator had no usages so that file was deleted.
 
 L. Assignment was kicked back.  The customizations to the html did not take effect because I modified 
     the html files that were in the target folder instead of the html files that were in the src folder.
+
+## Deployment to AWS
+
+1. In IntelliJ, create a .jar file by opening the maven tools window.  Double-click clean, then double-click install.  This can also be done from the command line by typing
+   mvn clean install.  The .jar file will appear in the target folder.
+
+   !()[]
+
+2. Next, create a Docker image.  Go to a search engine and type google jib maven plugin.  Several sites will have the plugin so go to one and copy the plugin (copy the portion starting with the tag
+   <plugin> and ending with </plugin>).
+
+   !()[]
+
+4.

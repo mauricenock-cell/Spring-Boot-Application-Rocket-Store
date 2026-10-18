@@ -78,4 +78,4 @@ I. Added tests to lines 31-47 of PartTest.java to check if minInv and maxInv are
 J. The deletePartsValidator had no usages so that file was deleted.
 
 L. Assignment was kicked back.  The customizations to the html did not take effect because I modified 
-    the html files that were in the target folder instead of the html files that were in the src folder.
+    the html files in the target folder instead of the ones in the src folder.

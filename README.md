@@ -78,4 +78,56 @@ I. Added tests to lines 31-47 of PartTest.java to check if minInv and maxInv are
 J. The deletePartsValidator had no usages so that file was deleted.
 
 L. Assignment was kicked back.  The customizations to the html did not take effect because I modified 
-    the html files in the target folder instead of the ones in the src folder.
+    the html files that were in the target folder instead of the html files that were in the src folder.
+
+## Deployment to AWS
+
+1.  Create a Docker image.  Go to a search engine and type google jib maven plugin.  Several sites will have the plugin; go to one and copy the plugin
+    (copy the portion starting with the tag plugin and ending with the tag /plugin). 
+     
+    <img src="images/Screenshot 2026-10-17 094344.png">
+    
+3.  In IntelliJ, open the pom.xml file and, under tags build and plugins, paste the snippet.
+
+    <img src="images/Screenshot 2026-10-17 095000.png">
+
+	This method avoids having to create a Dockerfile.
+
+5.	Create a .jar file by opening the Maven tools window and double-clicking clean, then 
+	double-clicking install.  This can also be done from the command line by typing
+            mvn clean install.  The .jar file will appear in the target folder.
+  	
+	<img src="images/Screenshot 2026-10-17 093955.png">
+
+7.  Go to the Maven tools window, expand plugins and jib, then double-click 
+     jib:DockerBuild, or from the command line, type mvn compile jib:DockerBuild.
+     This will create a Docker image.  The image moes-model-rockets-v1 is
+     created.
+     
+    <!--<img src="images/Screenshot 2026-10-17 102903.png">-->
+
+9.  Next, the image has to be pushed to DockerHub.  On the command line, type
+     docker tag image username/image.  In my case, it would be 
+     docker tag moes-model-rockets:v1 mnock1/moes-model-rockets:v1.  Then type
+     docker push username/image (docker push mnock1/moes-model-rockets:v1).
+
+10.  Go to AWS and log in/create a new account.  Create an EC2 instance
+     (straightforward process).  
+    
+     <!--<img src="images/Screenshot 2026-10-17 105902.png">-->
+    
+12.  Start the instance and connect to it.  My instance uses the default Amazon Linux OS.
+
+     <img src="images/Screenshot 2026-10-17 110320.png">
+
+14.  Install Docker and start its daemon by typing sudo yum install docker, then sudo 
+     systemctl start docker.service.
+    
+15.  Pull the image from DockerHub by typing docker pull DockerHubUsername/image or
+     docker pull mnock1/moes-model-rockets:v1 in my case.
+
+16.  To run the app, type sudo docker run -p 8080:8080 DockerHubUsername/image or
+             In my case, sudo docker run -p 8080:8080 mnock1/moes-model-rockets:v1.
+
+     <img src="images/Screenshot 2026-10-17 113802.png">
+   
